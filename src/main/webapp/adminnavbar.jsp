@@ -134,7 +134,7 @@
     <div class="sidebar">
         <!-- Logo and title -->
         <div class="logo">
-            <img src="#"> <!-- Replace with actual logo URL -->
+           <!-- Replace with actual logo URL -->
             MiniCare
         </div>
 
@@ -169,14 +169,7 @@
         </div>
 
         <!-- Icons and Profile -->
-        <div class="icons">
-            <i class="fa fa-user"></i>
-            <i class="fa fa-question-circle"></i>
-            <i class="fa fa-bell"></i>
-            <div class="profile">
-                <img src="https://via.placeholder.com/30" alt="Profile"> <!-- Replace with actual profile image URL -->
-            </div>
-        </div>
+       
     </div>
 
     <!-- Font Awesome for icons (link to include) -->

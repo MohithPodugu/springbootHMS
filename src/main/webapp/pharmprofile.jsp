@@ -145,7 +145,7 @@
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
-            <h2>ABHIHEAL</h2>
+            <h2>Mini Care</h2>
             <a href="pharmhome.jsp">Home</a>
             <a href="inventoryhome.jsp">Inventory Check</a>
             <a href="pharmprofile.jsp">Update Profile</a>

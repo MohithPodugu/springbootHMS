@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthSphere Doctor Module</title>
+    <title>Mini Care</title>
     <style>
         /* Reset and general styling */
         * {
@@ -105,27 +105,16 @@
     <div class="sidebar">
         <!-- Logo and title -->
         <div class="logo">
-            <img src="https://via.placeholder.com/30" alt="Logo"> <!-- Replace with actual logo URL -->
-            HealthSphere
+           Mini Care
         </div>
 
         <!-- Navigation Links -->
         <div class="nav">
             <a href="dochome">Home</a>
-            <a href="viewdocappointments">Appointments</a>
+            <a href="#">Appointments</a>
             <a href="addmedicine">Prescriptions</a>
             <a href="docprofile">Doctor Profile</a>
             <a href="doclogin">Logout</a>
-        </div>
-
-        <!-- Icons and Profile -->
-        <div class="icons">
-            <i class="fa fa-user-md"></i> <!-- Doctor Profile -->
-            <i class="fa fa-calendar-check"></i> <!-- Appointments -->
-            <i class="fa fa-bell"></i> <!-- Notifications -->
-            <div class="profile">
-                <img src="https://via.placeholder.com/30" alt="Profile"> <!-- Replace with actual profile image URL -->
-            </div>
         </div>
     </div>
 

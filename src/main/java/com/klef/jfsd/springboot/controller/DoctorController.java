@@ -1,13 +1,21 @@
 package com.klef.jfsd.springboot.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.klef.jfsd.springboot.model.BookAppointment;
 import com.klef.jfsd.springboot.model.Doctor;
+import com.klef.jfsd.springboot.model.Patient;
+import com.klef.jfsd.springboot.service.AppointmentService;
 import com.klef.jfsd.springboot.service.DoctorService;
+import com.klef.jfsd.springboot.service.PatientService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -17,6 +25,31 @@ public class DoctorController {
 
     @Autowired
     private DoctorService doctorService;
+    @Autowired
+    private PatientService patientService;
+    @Autowired
+    private AppointmentService appointmentService;
+    
+    
+    @GetMapping("/viewdocappointments")
+    public String viewDocAppointments(@RequestParam(value = "patientID", required = false) Integer patientID, Model model) {
+        if (patientID == null) {
+            // Handle the case where patientID is not provided
+            model.addAttribute("error", "Patient ID is required");
+            return "errorpage"; // Replace with your actual error page
+        }
+
+        // Fetch the appointments for the given patientID using the service
+        List<BookAppointment> appointments = appointmentService.getAppointmentsByPatient(patientID);
+
+        // Add the appointments to the model
+        model.addAttribute("appointmentsWithPatients", appointments);
+
+        // Return the view name
+        return "viewdocappointments";
+    }
+
+
 
     @GetMapping("dochome")
     public ModelAndView dochome() {
