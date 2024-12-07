@@ -137,10 +137,6 @@
 
             <button type="submit" class="btn-submit">Book Appointment</button>
         </form>
-
-        <div class="back-link">
-            <a href="viewappointments">Back to View Appointments</a>
-        </div>
     </div>
 </body>
 </html>
